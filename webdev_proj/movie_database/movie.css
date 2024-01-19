@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+:root {
+    --dark-color: #1b1b1b;
+    --alt-color: green;
+    --light-color: white;
+    --font-size: 2em;
+    --padding: 0.25em;
+}
+
+body {
+    background-color: var(--dark-color);
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+header h1 {
+    font-size: calc(1.5 * (var(--font-size)));
+    color: var(--light-color);
+    background-color: #0d0a0b;
+    background-image: linear-gradient(40deg, #0d0a0b 0%, #009fc2 74%, black);
+    padding: var(--padding);
+    border-bottom: 5px solid black;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.desc {
+    color: white;
+    font-size: calc(0.8 * var(--font-size));
+    background: #009ec2d6;
+    padding: var(--padding);
+}
+
+.allnav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid black;
+    padding: var(--padding);
+    min-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: var(--font-size);
+    background-color: transparent;
+}
+
+.content {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.content img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-bottom: 3rem;
+    image-rendering: pixelated;
+}
+
+.content form {
+    text-align: center;
+}
+
+.content input {
+    text-align: center;
+    border: none;
+    color: var(--light-color);
+    background: black;
+    opacity: 0.7;
+    font-size: calc(0.8 * var(--font-size));
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    width: 30%;
+}
+
+::placeholder {
+    color: var(--light-color);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.card img {
+    border: 1px solid cyan;
+}
+
+@keyframes genreshow {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    80% {
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.genrenav:hover .genrenavelements {
+    display: flex;
+    flex-direction: column;
+    animation: genreshow 0.5s ease-in-out forwards;
+    transform-origin: top;
+    z-index: 1;
+    width: 20em;
+    height: auto;
+}
+
+.genrenavelements {
+    display: none;
+    position: absolute;
+    background-color: #009fc2;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 0.85em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fontsize {
+    0% {
+        font-size: 2em;
+    }
+
+    100% {
+        font-size: 2.5em;
+        padding: 0.5rem;
+    }
+}
+
+.genrenavelements :any-link:hover {
+    background-image: linear-gradient(320deg, #009fc2, #0d0a0b, #009fc2);
+    animation: fontsize 0.5s ease-in-out;
+}
+
+.navelements :any-link:hover {
+    background-color: #00d5ffd4;
+    transform: scale(1.2);
+}
+.justreleased {
+    background-color: #0d0a0b;
+}
+.justreleased p{
+    background-color: #0d0a0b;
+    background-image: linear-gradient(40deg, #0d0a0b 0%, #009fc2 74%, black);
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    padding: var(--padding);
+    font-size: var(--font-size);
+    display: block;
+}
+.cards-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    gap:1em;
+}
+.heading{
+    background-color: #0d0a0b;
+    background-image: linear-gradient(40deg, #0d0a0b 0%, #009fc2 74%, black);
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    padding: var(--padding);
+    font-size: var(--font-size);
+    width: 100%;
+}
+.card{
+    color:white;
+    background-image: linear-gradient(40deg, #0d0a0b 0%, #009fc2 74%, black);
+    border: 1px solid #ddd;
+    margin:1em;
+    padding: 1em;
+    width:20%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    font-size:0.75em;
+}
+.card img {
+    width: 100%; 
+    border: 1px solid cyan;
+}
+.card div{
+    font-size:2em;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 48%; 
+    }
+}
+.result-grid{
+    display: flex;
+    justify-content: left;
+    gap:2em;
+    margin:1em;
+}

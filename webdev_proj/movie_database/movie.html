@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieWeb</title>
+    <link rel="stylesheet" href="movie.css">
+    <link rel="icon" type="image/x-icon" href="images/cinema.png" />
+    <script defer src="movie.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Movies</h1>
+        <nav class="allnav">
+            <a class="navelements" href="#justReleasedSection">New Releases</a>
+            <div class="genrenav"> 
+                <a class="navelements" href="#genre">Genre</a>
+                <nav class="genrenavelements">
+                    <a href="#comedy">Comedy</a>
+                    <a href="#action">Action</a>
+                    <a href="#drama">Drama</a>
+                    <a href="#thriller">Thriller</a>
+                    <a href="#horror">Horror</a>
+                    <a href="#fantasy">Fantasy</a>
+                    <a href="#romance">Romance</a>
+                    <a href="#adventure">Adventure</a>
+                    <a href="#sciencefiction">Science Fiction</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="desc">
+            <p>Welcome to MovieWeb!</p>
+            <p>You can search for iMDB ratings and description of a movie.</p>
+        </div>
+        <div class="content">
+            <img src="/images/image.jpg" alt="Movie Image">
+            <form>
+                <input id="searchInput" type="text" placeholder="Search for a movie" autofocus>
+            </form>
+            <div class="search-list"></div>
+        </div>
+        <div class="container">
+            <div class="result-container">
+                <div class="result-grid"></div>
+            </div>
+        </div>
+        <div class="justreleased" id="justReleasedSection">
+            <p class="title">Just Released</p>
+            <div class="cards-container" id="justReleasedContainer"></div>      
+        </div>
+        <div class="cards-container" id="comedyContainer"></div>
+        <div class="cards-container" id="actionContainer"></div>
+        <div class="cards-container" id="dramaContainer"></div>
+        <div class="cards-container" id="thrillerContainer"></div>
+        <div class="cards-container" id="horrorContainer"></div>
+        <div class="cards-container" id="fantasyContainer"></div>
+        <div class="cards-container" id="romanceContainer"></div>
+        <div class="cards-container" id="adventureContainer"></div>
+        <div class="cards-container" id="sciencefictionContainer"></div>
+    </main>
+</body>
+</html>

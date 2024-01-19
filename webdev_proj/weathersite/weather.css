@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(27, 47, 49);
+}
+.card{
+    position: relative;
+    width: 60%;
+    height: auto;
+    background: #5555F9;
+    background: radial-gradient(at left top, #5555F9, #305B96);
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 20px;
+    color:white;
+}
+.search{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:transparent;
+}
+.search input{
+    background-color:whitesmoke;
+    border-color:transparent;
+    border-radius: 8px;
+    width: 80%;
+    text-align: left;
+    margin:auto;
+    font-size:1.25rem;
+    padding: 2% 0.5%;
+    color:rgb(114, 32, 155);
+}
+.search button{
+    background-color: white;
+    border-color:transparent;
+    cursor: pointer;
+    padding: 2% 0.5%;
+    border-radius: 100%;
+}
+.search button img{
+    width: 47%;
+    height: 55%;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 2rem;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+.weather h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+.weather h3{
+    font-size:2rem;
+    font-weight: 300;
+    margin-top: 0.75rem;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top:50px;
+}
+.details .attributes{
+    display: flex;
+    flex-direction:row;
+    text-align: left;
+    justify-content: space-between;
+}
+.attributes img{
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;
+}
+.humidity,.wind{
+    font-size:2rem;
+    margin-top: -6px;
+}
+.error{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top:1rem;
+    display: none;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
