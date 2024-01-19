@@ -74,7 +74,7 @@ function displayMovieList(movies) {
     const heading = document.createElement('p');
     heading.classList.add('heading');
     const searchTerm = movieSearchBox.value.trim();
-    heading.innerText = searchTerm;
+    heading.innerText = searchTerm[0].toUpperCase()+searchTerm.substring(1);
     movieListContainer.appendChild(heading);
 
     movies.forEach(movie => {
