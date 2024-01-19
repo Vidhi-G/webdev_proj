@@ -143,7 +143,7 @@ function createMovieCard(movie) {
     card.classList.add('card');
 
     const img = document.createElement('img');
-    img.src = movie.Poster !== 'N/A' ? movie.Poster : 'images/default-poster.jpg';
+    img.src = movie.Poster;
     img.alt = movie.Title;
 
     const title = document.createElement('div');
@@ -162,7 +162,7 @@ function createMovieCard(movie) {
 async function displayMovieDetails(details) {
     resultGrid.innerHTML = `
     <div class="movie-poster">
-        <img src="${details.Poster !== "N/A" ? details.Poster : "image_not_found.png"}" alt="Movie Poster">
+        <img src="${details.Poster}" alt="Movie Poster">
     </div>
     <div class="movie-info">
         <h3 class="movie-title">${details.Title}</h3>
@@ -171,7 +171,7 @@ async function displayMovieDetails(details) {
             <li class="rated">Ratings: ${details.Rated}</li>
             <li class="released">Released: ${details.Released}</li>
         </ul>
-        <p class="genre"><b>Genre:</b> ${details.Genre}</p>
+        <p class="genre"><b>Genre:</b> ${details.Genre}</p>a
         <p class="writer"><b>Writer:</b> ${details.Writer}</p>
         <p class="actors"><b>Actors: </b>${details.Actors}</p>
         <p class="plot"><b>Plot:</b> ${details.Plot}</p>
